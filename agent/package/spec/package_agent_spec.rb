@@ -4,7 +4,7 @@ require File.join([File.dirname(__FILE__), '/../../../spec/spec_helper'])
 
 describe "package agent" do
     before do
-        agent_file = File.join([File.dirname(__FILE__), "../agent/puppet-package.rb"])
+        agent_file = File.join([File.dirname(__FILE__), "../agent/package.rb"])
         @agent = MCollective::Test::LocalAgentTest.new("package", :agent_file => agent_file).plugin
     end
     describe "#yum_clean" do

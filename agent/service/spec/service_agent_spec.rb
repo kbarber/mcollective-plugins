@@ -9,7 +9,7 @@ end
 
 describe "service agent" do
     before do
-        agent_file = File.join([File.dirname(__FILE__), "../agent/puppet-service.rb"])
+        agent_file = File.join([File.dirname(__FILE__), "../agent/service.rb"])
         @agent = MCollective::Test::LocalAgentTest.new("service", :agent_file => agent_file).plugin
         @agent.stubs(:require).with('puppet').returns(true)
     end
